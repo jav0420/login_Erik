@@ -1,0 +1,45 @@
+﻿<Window x:Class="login.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:login"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="630" Width="360"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown">    
+    <!--borde redondeado-->
+    <Border CornerRadius="50" 
+            BorderThickness="5">
+        <!--Para poner el la imagen-->
+        <Border CornerRadius="50" Opacity="0.45">
+            <Border.Background>
+                <ImageBrush ImageSource="/imagenes/fondo.jpg"
+                            Stretch="UniformToFill"/>
+            </Border.Background>
+        </Border>
+        <!--Para poner el borde de colores-->
+        <Border.BorderBrush>
+            <!--Para controlar el angulo del degrade-->
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <!--Para controlar los colores del Borde-->
+                <GradientStop Color="#2ECC71" Offset="0"/>
+                <GradientStop Color="#17A586" Offset="0.5"/>
+                <GradientStop Color="#0B5345" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <!--Para poner fondo-->
+        <Border.Background>
+            <!--Para controlar el angulo del degrade-->
+            <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                <!--Para controlar los colores del Borde-->
+                <GradientStop Color="#76D7C4" Offset="1"/>
+                <GradientStop Color="#ffff" Offset="0"/>
+            </LinearGradientBrush>
+        </Border.Background>
+    </Border>
+</Window>
